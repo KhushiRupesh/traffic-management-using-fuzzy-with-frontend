@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Control System</title>
+</head>
+<body>
+    <h1>Traffic Control System</h1>
+    <form action="/compute" method="POST">
+        <h2>North Lane</h2>
+        Arrival: <input type="number" name="north_arrival" min="0" max="10" required><br>
+        Queue: <input type="number" name="north_queue" min="0" max="10" required><br>
+        
+        <h2>South Lane</h2>
+        Arrival: <input type="number" name="south_arrival" min="0" max="10" required><br>
+        Queue: <input type="number" name="south_queue" min="0" max="10" required><br>
+
+        <h2>East Lane</h2>
+        Arrival: <input type="number" name="east_arrival" min="0" max="10" required><br>
+        Queue: <input type="number" name="east_queue" min="0" max="10" required><br>
+
+        <h2>West Lane</h2>
+        Arrival: <input type="number" name="west_arrival" min="0" max="10" required><br>
+        Queue: <input type="number" name="west_queue" min="0" max="10" required><br>
+        
+        <input type="submit" value="Compute">
+    </form>
+
+    <h2>Results</h2>
+    <h2>Results</h2>
+    <div id="results">
+        <p>North Density: {{ north_density }}</p>
+        <p>South Density: {{ south_density }}</p>
+        <p>East Density: {{ east_density }}</p>
+        <p>West Density: {{ west_density }}</p>
+        <p>North-South Lane Time: {{ ns_lane_time }}</p>
+        <p>East-West Lane Time: {{ ew_lane_time }}</p>
+    </div>
+</body>
+</html>
